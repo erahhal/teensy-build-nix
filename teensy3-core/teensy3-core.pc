@@ -1,0 +1,11 @@
+prefix=@out@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${exec_prefix}/include
+
+Name: libteensy3-core
+Description: Teensy3 core static library and headers
+Version: @version@
+
+Libs: -L${libdir} -l:libteensy3-core.a -T${includedir}/@linkerScript@
+Cflags: -I${includedir}
